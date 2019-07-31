@@ -63,11 +63,11 @@ module.exports = function toDuplex (duplex, options) {
         return chunk === END_CHUNK ? { done: true } : { value: chunk }
       },
       async throw (err) {
-        stream.emit('error', err)
+        stream.destroy(err)
         return { done: true }
       },
       async return () {
-        stream.emit('close')
+        stream.destroy()
         return { done: true }
       }
     })
