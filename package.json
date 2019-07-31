@@ -1,0 +1,49 @@
+{
+  "name": "it-to-stream",
+  "version": "0.0.0",
+  "description": "Convert streaming iterables to Node.js streams",
+  "main": "src/index.js",
+  "browser": {
+    "stream": "readable-stream"
+  },
+  "scripts": {
+    "test": "ava test/*.test.js --verbose",
+    "lint": "standard",
+    "coverage": "nyc --reporter=text --reporter=lcov npm test"
+  },
+  "keywords": [
+    "stream",
+    "readablestream"
+  ],
+  "author": "Alan Shaw",
+  "license": "MIT",
+  "dependencies": {
+    "buffer": "^5.2.1",
+    "fast-fifo": "^1.0.0",
+    "get-iterator": "^1.0.2",
+    "p-defer": "^3.0.0",
+    "p-fifo": "^1.0.0",
+    "readable-stream": "^3.4.0"
+  },
+  "devDependencies": {
+    "ava": "^2.2.0",
+    "it-pair": "^1.0.0",
+    "nyc": "^14.1.1",
+    "standard": "^13.1.0"
+  },
+  "ava": {
+    "babel": false,
+    "compileEnhancements": false
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanshaw/it-to-stream.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alanshaw/it-to-stream/issues"
+  },
+  "homepage": "https://github.com/alanshaw/it-to-stream#readme"
+}
