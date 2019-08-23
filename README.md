@@ -103,6 +103,11 @@ Convert a [duplex](https://gist.github.com/alanshaw/591dc7dd54e4f99338a347ef568d
 
 `options` are passed directly to the `Duplex` constructor.
 
+## Related
+
+* [`stream-to-it`](https://www.npmjs.com/package/stream-to-it) Convert Node.js streams to streaming iterables
+* [`it-pipe`](https://www.npmjs.com/package/it-pipe) Utility to "pipe" async iterables together
+
 ## Contribute
 
 Feel free to dive in! [Open an issue](https://github.com/alanshaw/it-to-stream/issues/new) or submit PRs.
