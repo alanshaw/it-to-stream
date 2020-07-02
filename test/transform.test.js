@@ -1,5 +1,6 @@
 const test = require('ava')
 const { Readable } = require('stream')
+const { Buffer } = require('buffer')
 const toStream = require('../')
 const { collect } = require('./helpers/streams')
 const { randomInt, randomBytes } = require('./helpers/random')

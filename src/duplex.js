@@ -1,6 +1,7 @@
 const { Readable, Writable, Duplex } = require('stream')
 const getIterator = require('get-iterator')
 const Fifo = require('p-fifo')
+const { Buffer } = require('buffer')
 const END_CHUNK = Buffer.alloc(0)
 
 module.exports = function toDuplex (duplex, options) {
