@@ -18,7 +18,7 @@
   "author": "Alan Shaw",
   "license": "MIT",
   "dependencies": {
-    "buffer": "^5.6.0",
+    "buffer": "^6.0.3",
     "fast-fifo": "^1.0.0",
     "get-iterator": "^1.0.2",
     "p-defer": "^3.0.0",
