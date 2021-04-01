@@ -22,9 +22,9 @@ module.exports = function toDuplex (duplex, options) {
     Stream = Readable
   }
 
-  Object.assign(
-    options,
-    duplex.source ? {
+  let readable
+  if (duplex.source) {
+    readable = {
       async read (size) {
         if (reading) return
         reading = true
@@ -41,16 +41,22 @@ module.exports = function toDuplex (duplex, options) {
           reading = false
         }
       }
-    } : {},
-    duplex.sink ? {
+    }
+  }
+
+  let writable
+  if (duplex.sink) {
+    writable = {
       write (chunk, enc, cb) {
         fifo.push(chunk).then(() => cb(), cb)
       },
       final (cb) {
         fifo.push(END_CHUNK).then(() => cb(), cb)
       }
-    } : {}
-  )
+    }
+  }
+
+  Object.assign(options, readable, writable)
 
   const stream = new Stream(options)
 

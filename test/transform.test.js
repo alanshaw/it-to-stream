@@ -85,7 +85,7 @@ test('should transform single chunk into no chunks', async t => {
       }
     }),
     toStream.transform(source => (async function * () {
-      // eslint-disable-next-line no-unused-vars
+      // eslint-disable-next-line no-unused-vars, no-empty
       for await (const chunk of source) {}
     })())
   )

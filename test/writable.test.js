@@ -49,10 +49,8 @@ test('should end mid stream', async t => {
       }
     }),
     toStream.writable(async source => {
-      for await (const chunk of source) {
-        output.push(chunk)
-        break
-      }
+      const { value, done } = await source.next()
+      if (!done) output.push(value)
     })
   )
 
