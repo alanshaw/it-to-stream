@@ -52,7 +52,9 @@ test('should end mid stream', async t => {
       const { value, done } = await source.next()
       if (!done) {
         output.push(value)
-        if (source.return) source.return()
+      }
+      if (source.return) {
+        source.return()
       }
     })
   )
