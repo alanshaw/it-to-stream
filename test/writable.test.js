@@ -50,7 +50,10 @@ test('should end mid stream', async t => {
     }),
     toStream.writable(async source => {
       const { value, done } = await source.next()
-      if (!done) output.push(value)
+      if (!done) {
+        output.push(value)
+        if (source.return) source.return()
+      }
     })
   )
 
