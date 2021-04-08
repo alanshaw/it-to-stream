@@ -1,7 +1,7 @@
 # it-to-stream
 
 [![Build Status](https://travis-ci.org/alanshaw/it-to-stream.svg?branch=master)](https://travis-ci.org/alanshaw/it-to-stream)
-[![dependencies Status](https://david-dm.org/alanshaw/it-to-stream/status.svg)](https://david-dm.org/alanshaw/it-to-stream)
+[![dependencies Status](https://status.david-dm.org/gh/alanshaw/it-to-stream.svg)](https://david-dm.org/alanshaw/it-to-stream)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 > Convert streaming iterables to Node.js streams
