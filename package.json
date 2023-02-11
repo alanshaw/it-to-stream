@@ -26,7 +26,7 @@
     "readable-stream": "^3.6.0"
   },
   "devDependencies": {
-    "ava": "^3.9.0",
+    "ava": "^5.2.0",
     "it-pair": "^1.0.0",
     "nyc": "^15.1.0",
     "standard": "^16.0.3"
